@@ -30,3 +30,9 @@ describe('Fav Blog', () => {
         expect(listHelper.favoriteBlog([])).toEqual({})
       })
 })
+
+describe('Author with most Blogs', () => {
+    test('when list has author with multiple blogs, the author with max blogs is returned', () => {
+        expect(listHelper.mostBlogs(blogs)).toEqual({author: "Robert C. Martin",blogs: 3})
+      })
+})
