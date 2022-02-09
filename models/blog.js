@@ -21,4 +21,4 @@ blogSchema.set('toJSON', {
     }
 })
 
-module.exports = new mongoose.Model('Blog', blogSchema)
+module.exports = new mongoose.model('Blog', blogSchema)
