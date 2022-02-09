@@ -7,4 +7,5 @@ I am building a blog list application using MERN stack, that allows users to sav
 -   express
 -   mongoose
 -   nodemon         (dev-dependency)
+-   jest            (dev-dependency)
 
