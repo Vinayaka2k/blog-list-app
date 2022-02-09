@@ -37,12 +37,12 @@ blogRouter.delete('/:id', (request, response, next) => {
 
 blogRouter.put('/:id', (request, response, next) => {
     const body = request.body
-    const blog = new Blog({
+    const blog = {
         title: body.title,
         url: body.url,
         author: body.author,
         likes: body.likes
-    })
+    }
     Blog.findByIdAndUpdate(request.params.id, blog, {new:true}).then(newBlog => {
         response.json(newBlog)
     }).catch(error => next(error))
