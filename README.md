@@ -8,4 +8,5 @@ I am building a blog list application using MERN stack, that allows users to sav
 -   mongoose
 -   nodemon         (dev-dependency)
 -   jest            (dev-dependency)
-
+-   cross-env            (dev-dependency)
+-   supertest            (dev-dependency)
