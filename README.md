@@ -6,8 +6,8 @@ I am building a blog list application using MERN stack, that allows users to sav
 -   dotenv
 -   express
 -   mongoose
--   express-async-errors
 -   nodemon         (dev-dependency)
 -   jest            (dev-dependency)
 -   cross-env            (dev-dependency)
 -   supertest            (dev-dependency)
+-   express-async-errors
