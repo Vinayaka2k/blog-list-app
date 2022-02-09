@@ -4,7 +4,7 @@
   "description": "I am building a blog list application using MERN stack, that allows users to save interesting blogs they have stumbled across on the internet so that they could come back later and visit the blogs. For each blog, fields like URL, Title are stored.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --verbose",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Vinayaka2k/blog-list-app#readme",
   "devDependencies": {
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
@@ -26,5 +27,8 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mongoose": "^6.2.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
