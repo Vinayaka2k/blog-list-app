@@ -11,3 +11,4 @@ I am building a blog list application using MERN stack, that allows users to sav
 -   cross-env            (dev-dependency)
 -   supertest            (dev-dependency)
 -   express-async-errors
+-   bcrypt
