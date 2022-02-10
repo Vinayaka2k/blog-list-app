@@ -4,7 +4,7 @@ I am building a blog list application using MERN stack, that allows users to sav
 ## How to run ?
 -   clone the repo using: `git clone https://github.com/Vinayaka2k/blog-list-app.git`
 -   Create a file `.env` in the root (folder that contains package.json)
--   Add the following Env variables : 
+-   Add the following Env variables : <br />
         `MONGODB_URI` = `<your mongodb URI specifying a database>`<br />
         `TEST_MONGODB_URI` = `<your mongodb URI for the test database>`<br />
         `PORT` = `3001`<br />
