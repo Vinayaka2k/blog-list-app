@@ -5,9 +5,8 @@ I am building a blog list application using MERN stack, that allows users to sav
 -   clone the repo using: `git clone https://github.com/Vinayaka2k/blog-list-app.git`
 -   Create a file `.env` in the root (folder that contains package.json)
 -   Add the following Env variables : 
-
-        MONGODB_URI = <your mongodb URI specifying a database>
-        TEST_MONGODB_URI = <your mongodb URI for the test database>
+        `MONGODB_URI` = <your mongodb URI specifying a database>
+        `TEST_MONGODB_URI` = <your mongodb URI for the test database>
         `PORT` = 3001
         `SECRET` = <any string that can be used by jwt as the secret>
 -   install the dependencies listed below using: `npm install <package-name>`
