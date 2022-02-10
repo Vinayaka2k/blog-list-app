@@ -20,6 +20,16 @@ The following restful endpoints are exposed for public consumption.
 ### Blogs
 The blogs endpoint exposes the `GET`, `POST`, `DELETE` and `PUT` methods for execution and consumption.
 
+#### `GET` 📖
+There are *two* `GET` methods exposed for consumption:
+
+##### Parameterless
+The first method is parameterless and should be expected to return *all* available blogs. It can be consumed at the following endpoint:
+
+```
+endpoint here
+```
+
 ### What has been completed till now ?
 -   APIs for CRUD operations on a Blog
 -   API for User Login : Token generation using jwt : Password Hashing using bcrypt
