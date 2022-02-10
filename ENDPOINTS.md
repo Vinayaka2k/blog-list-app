@@ -58,3 +58,9 @@ The `PUT` method is utilized to update an existing blog post with the following 
     "likes": 9001
 }
 ```
+
+This method can be invoked from the following endpoint:
+
+```
+endpoint here
+```
