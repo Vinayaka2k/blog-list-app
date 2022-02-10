@@ -15,27 +15,7 @@ I am building a blog list application using MERN stack, that allows users to sav
 -   Run the command for testing Environment: `npm run test` or simply `npm test`
 
 ## Exposed Endpoints
-The following restful endpoints are exposed for public consumption.
-
-### Blogs
-The blogs endpoint exposes the `GET`, `POST`, `DELETE` and `PUT` methods for execution and consumption.
-
-#### `GET` 📖
-There are *two* `GET` methods exposed for consumption, one is parameterless while the other has a single parameter.
-
-##### Parameterless
-The first method is parameterless and should be expected to return *all* available blogs. It can be consumed at the following endpoint:
-
-```
-endpoint here
-```
-
-##### Parameterized
-The second method expects an `id` parameter and should be expected to return the blog associated with the specified `id`. If no blog is found, then a status code of `404` is returned. It can be consumed at the following endpoint:
-
-```
-endpoint here
-```
+There are currently *three* restful endpoints exposed for public consumption. You can read more about them [here](ENDPOINTS.md).
 
 ### What has been completed till now ?
 -   APIs for CRUD operations on a Blog
