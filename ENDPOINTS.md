@@ -46,3 +46,15 @@ endpoint here
 ```
 
 This method returns a status code of `204`.
+
+## `PUT` ♻️
+The `PUT` method is utilized to update an existing blog post with the following body data:
+
+```json
+{
+    "title": "My Fancy Dinner",
+    "url": "https://myblog.com/my-fancy-dinner",
+    "author": "tacosontitan",
+    "likes": 9001
+}
+```
