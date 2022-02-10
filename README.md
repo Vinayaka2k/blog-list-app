@@ -1,19 +1,8 @@
 # blog-list-app
 I am building a blog list application using MERN stack, that allows users to save interesting blogs they have stumbled across on the internet so that they could come back later and visit the blogs. For each blog, fields like URL, Title, Author and num of likes are stored.
 
-## Dependencies 
--   cors
--   dotenv
--   express
--   mongoose
--   nodemon         (dev-dependency)
--   jest            (dev-dependency)
--   cross-env            (dev-dependency)
--   supertest            (dev-dependency)
--   express-async-errors
--   bcrypt
--   mongoose-unique-validator
--   jsonwebtoken
+## How to run ?
+-   clone the repo using: 
 
 ### What has been completed till now ?
 -   APIs for CRUD operations on a Blog
@@ -33,5 +22,22 @@ I am building a blog list application using MERN stack, that allows users to sav
 -   Start with the front end for the appliaction with React
 -   Test Frontend with Jest
 -   After completing the whole stack, End to End testing using Cypress
+-   After making sure the app works locally, deploy frontend and backend independently to Vercel
+-   Make sure that the deployed app works by Testing
+-   Any other new feature that is suggested by the community !
+
+#### Dependencies 
+-   cors
+-   dotenv
+-   express
+-   mongoose
+-   nodemon         (dev-dependency)
+-   jest            (dev-dependency)
+-   cross-env            (dev-dependency)
+-   supertest            (dev-dependency)
+-   express-async-errors
+-   bcrypt
+-   mongoose-unique-validator
+-   jsonwebtoken
 
 #### Want to contribute? Would be more than happy to review and merge your changes... Please raise a PR !!
