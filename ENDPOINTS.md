@@ -8,14 +8,14 @@ There are *two* `GET` methods exposed for consumption, one is parameterless whil
 The first method is parameterless and should be expected to return *all* available blogs. It can be consumed at the following endpoint:
 
 ```
-endpoint here
+/api/blogs
 ```
 
 ### Parameterized
 The second method expects an `id` parameter and should be expected to return the blog associated with the specified `id`. If no blog is found, then a status code of `404` is returned. It can be consumed at the following endpoint:
 
 ```
-endpoint here
+/api/blogs/<blog_id>
 ```
 
 ## `POST` 📬
@@ -33,7 +33,7 @@ The `POST` method enables the creation of a blog post, assuming a valid bearer t
 When the blog post is recorded successfully, a status code of `201` is returned along with the blog data above. The endpoint can be invoked at:
 
 ```
-endpoint here
+/api/blogs
 ```
 
 ***Note**: If an invalid token is provided, then a status code of `401` will be returned.*
@@ -42,7 +42,7 @@ endpoint here
 The `DELETE` method allows the deletion of a blog by a specified `id` query parameter at the following endpoint:
 
 ```
-endpoint here
+/api/blogs/<blog_id>
 ```
 
 This method returns a status code of `204`.
@@ -62,5 +62,5 @@ The `PUT` method is utilized to update an existing blog post with the following 
 This method can be invoked from the following endpoint:
 
 ```
-endpoint here
+/api/blogs/<blog_id>
 ```
