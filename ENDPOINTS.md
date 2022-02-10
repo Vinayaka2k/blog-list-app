@@ -30,6 +30,19 @@ The `POST` method enables the creation of a blog post, assuming a valid bearer t
 }
 ```
 
-When the blog post is recorded successfully, a status code of `201` is returned along with the blog data above.
+When the blog post is recorded successfully, a status code of `201` is returned along with the blog data above. The endpoint can be invoked at:
+
+```
+endpoint here
+```
 
 ***Note**: If an invalid token is provided, then a status code of `401` will be returned.*
+
+## `DELETE` ❌
+The `DELETE` method allows the deletion of a blog by a specified `id` query parameter at the following endpoint:
+
+```
+endpoint here
+```
+
+This method returns a status code of `204`.
