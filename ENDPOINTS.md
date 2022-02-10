@@ -17,3 +17,19 @@ The second method expects an `id` parameter and should be expected to return the
 ```
 endpoint here
 ```
+
+## `POST` 📬
+The `POST` method enables the creation of a blog post, assuming a valid bearer token is provided, using the following data model as the body content for the request:
+
+```json
+{
+    "title": "My Fancy Dinner",
+    "url": "https://myblog.com/my-fancy-dinner",
+    "author": "tacosontitan",
+    "likes": 9001
+}
+```
+
+When the blog post is recorded successfully, a status code of `201` is returned along with the blog data above.
+
+***Note**: If an invalid token is provided, then a status code of `401` will be returned.*
