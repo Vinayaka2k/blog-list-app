@@ -14,6 +14,9 @@ I am building a blog list application using MERN stack, that allows users to sav
 -   Run the command for Development Environment: `npm run dev`
 -   Run the command for testing Environment: `npm run test` or simply `npm test`
 
+## Exposed Endpoints
+There are currently *three* restful endpoints exposed for public consumption. You can read more about them [here](ENDPOINTS.md).
+
 ### What has been completed till now ?
 -   APIs for CRUD operations on a Blog
 -   API for User Login : Token generation using jwt : Password Hashing using bcrypt
