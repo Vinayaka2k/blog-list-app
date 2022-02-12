@@ -5,15 +5,15 @@ const endpointHandler = require(`../handlers/endpointHandler`);
 
 blogRouter.get('/', async (request, response) => {
     const blogs = await Blog.find({});
-    response.json(blogs);
+    return response.json(blogs);
 });
 
 blogRouter.get('/:id', async (request, response) => {
     const blog = Blog.findById(request.params.id);
     if (blog)
-        response.json(blog);
+        return response.json(blog);
     else
-        response.status(404).end();
+        return response.status(404).end();
 });
 
 blogRouter.post('/', async (request, response, next) => {
