@@ -1,6 +1,6 @@
-const Blog = require('../models/blog')
-const blogRouter = require('express').Router()
-const User = require('../models/user')
+const Blog = require('../models/blog');
+const blogRouter = require('express').Router();
+const User = require('../models/user');
 const endpointHandler = require(`../handlers/endpointHandler`);
 
 blogRouter.get('/', async (request, response) => {
