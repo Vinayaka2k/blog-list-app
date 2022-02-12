@@ -44,8 +44,8 @@ blogRouter.post('/', async (request, response, next) => {
 
 blogRouter.delete('/:id', async (request, response) => {
     endpointHandler.runWithValidation(request, response, token => {
-        const deletedBlog = await Blog.findByIdAndRemove(request.params.id)
-        response.status(204).end()
+        await Blog.findByIdAndRemove(request.params.id)
+        return response.status(204).end()
     });
 })
 
