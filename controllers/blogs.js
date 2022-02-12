@@ -50,20 +50,17 @@ blogRouter.delete('/:id', async (request, response) => {
 })
 
 blogRouter.put('/:id', async (request, response) => {
-    const token = getTokenFromRequest(request)
-    const decodedToken = jwt.verify(token, process.env.SECRET)
-    if (!decodedToken.id)
-        return response.status(401).json({ error: 'token missing or invalid' })
-
-    const body = request.body
-    const blog = {
-        title: body.title,
-        url: body.url,
-        author: body.author,
-        likes: body.likes
-    }
-    const updatedBlog = Blog.findByIdAndUpdate(request.params.id, blog, { new: true })
-    response.json(updatedBlog)
+    endpointHandler.runWithValidation(request, response, token => {
+        const body = request.body
+        const blog = {
+            title: body.title,
+            url: body.url,
+            author: body.author,
+            likes: body.likes
+        }
+        const updatedBlog = Blog.findByIdAndUpdate(request.params.id, blog, { new: true })
+        response.json(updatedBlog)
+    });
 })
 
 module.exports = blogRouter
