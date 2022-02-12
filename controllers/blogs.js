@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 
 const getTokenFromRequest = request => {
     const authorization = request.get('authorization')
-    if(authorization && authorization.toLowerCase().startsWith('bearer'))
+    if (authorization && authorization.toLowerCase().startsWith('bearer'))
         return authorization.substring(7)
 }
 
@@ -16,7 +16,7 @@ blogRouter.get('/', async (request, response) => {
 
 blogRouter.get('/:id', async (request, response) => {
     const blog = Blog.findById(request.params.id)
-    if(blog)
+    if (blog)
         response.json(blog)
     else
         response.status(404).end()
@@ -25,8 +25,8 @@ blogRouter.get('/:id', async (request, response) => {
 blogRouter.post('/', async (request, response, next) => {
     const token = getTokenFromRequest(request)
     const decodedToken = jwt.verify(token, process.env.SECRET)
-    if(!decodedToken.id)
-        return response.status(401).json({error: 'token missing or invalid'})
+    if (!decodedToken.id)
+        return response.status(401).json({ error: 'token missing or invalid' })
     const user = await User.findById(decodedToken.id)
 
     const body = request.body
@@ -46,9 +46,9 @@ blogRouter.post('/', async (request, response, next) => {
 blogRouter.delete('/:id', async (request, response) => {
     const token = getTokenFromRequest(request)
     const decodedToken = jwt.verify(token, process.env.SECRET)
-    if(!decodedToken.id)
-        return response.status(401).json({error: 'token missing or invalid'})
-        
+    if (!decodedToken.id)
+        return response.status(401).json({ error: 'token missing or invalid' })
+
     const deletedBlog = await Blog.findByIdAndRemove(request.params.id)
     response.status(204).end()
 })
@@ -56,8 +56,8 @@ blogRouter.delete('/:id', async (request, response) => {
 blogRouter.put('/:id', async (request, response) => {
     const token = getTokenFromRequest(request)
     const decodedToken = jwt.verify(token, process.env.SECRET)
-    if(!decodedToken.id)
-        return response.status(401).json({error: 'token missing or invalid'})
+    if (!decodedToken.id)
+        return response.status(401).json({ error: 'token missing or invalid' })
 
     const body = request.body
     const blog = {
@@ -66,7 +66,7 @@ blogRouter.put('/:id', async (request, response) => {
         author: body.author,
         likes: body.likes
     }
-    const updatedBlog = Blog.findByIdAndUpdate(request.params.id, blog, {new:true})
+    const updatedBlog = Blog.findByIdAndUpdate(request.params.id, blog, { new: true })
     response.json(updatedBlog)
 })
 
