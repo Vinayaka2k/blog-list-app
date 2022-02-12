@@ -20,10 +20,10 @@ function getBearerTokenFromRequest(request) {
  * @param {String} message What message should the consumer provide their response object?
  * @returns Returns a validation response object containing the validation result and appropriate response data.
  */
-function generateValidationResult(isValid, status, message) {
+function generateValidationResult(valid, status, message) {
     return {
-        isValid: isValid,
-        responseData: {
+        valid: valid,
+        response: {
             status: status,
             message: message
         }
@@ -42,5 +42,14 @@ module.exports = {
             return generateValidationResult(true, 200, 'The provided token is valid.');
         else
             return generateValidationResult(false, 401, 'Invalid token.')
+    },
+    /**
+     * Populates a response object with the specified validation result.
+     * @param {ApiResponse} response The response object that should be sent back to the consumer.
+     * @param {TokenValidationResult} validationResult The result of token validation.
+     */
+    populateReponse: function(response, validationResult) {
+        return response.status(validationResult.response.status)
+                       .json({ error: validationResult.response.message });
     }
 }
