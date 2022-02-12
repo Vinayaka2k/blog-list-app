@@ -19,7 +19,6 @@ blogRouter.get('/:id', async (request, response) => {
 blogRouter.post('/', async (request, response, next) => {
     endpointHandler.runWithValidation(request, response, token => {
         const user = await User.findById(token);
-
         const body = request.body;
         const blog = new Blog({
             title: body.title,
